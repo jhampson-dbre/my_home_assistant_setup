@@ -1,0 +1,13 @@
+---
+- name: Initial OS setup
+  hosts: all
+  remote_user: root
+  tasks:
+    - name: Import preinstall_config role
+      import_role: jhampson_dbre.home_assistant.preinstall_config
+
+- name: Install Home Assistant Supervised and Requirements
+  hosts: all
+  become: yes
+  roles:
+    - name: jhampson_dbre.home_assistant_supervised_install
