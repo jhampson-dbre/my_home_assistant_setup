@@ -2,3 +2,4 @@ all:
   hosts:
     rpi4:
       ansible_host: 192.168.68.124
+      ansible_user: homeassistant
