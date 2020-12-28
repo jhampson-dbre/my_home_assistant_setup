@@ -1,6 +1,6 @@
 ---
 roles:
-  - name: jhampson_dbre.home_assistant_supervised_install
+  - name: jhampson_dbre.home_assistant_supervised
 
 collections:
   - name: jhampson_dbre.home_assistant

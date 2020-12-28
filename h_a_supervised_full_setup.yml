@@ -1,13 +1,18 @@
 ---
 - name: Initial OS setup
   hosts: all
-  remote_user: root
+  # vars:
+  #   ansible_user: root
+  become: yes
   tasks:
     - name: Import preinstall_config role
-      import_role: jhampson_dbre.home_assistant.preinstall_config
+      import_role:
+        name: jhampson_dbre.home_assistant.preinstall_config
 
 - name: Install Home Assistant Supervised and Requirements
   hosts: all
   become: yes
+  force_handlers: true
   roles:
-    - name: jhampson_dbre.home_assistant_supervised_install
+    - name: jhampson_dbre.home_assistant_supervised
+    - name: jhampson_dbre.home_assistant.harden_os
