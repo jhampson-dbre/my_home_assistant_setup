@@ -7,13 +7,15 @@
 # and the non-root account can be used (e.g. as host_var)
 - name: Initial OS setup
   hosts: all
-  vars:
-    ansible_user: root
+  # vars:
+  #   ansible_user: root
   become: yes
   tasks:
     - name: Import preinstall_config role
       import_role:
         name: jhampson_dbre.home_assistant.preinstall_config
+      vars:
+        has_reserved_ip: true
 
 # Since preinstall_config creates a non-root account,
 # we can use `become: yes` for privelege escalation
@@ -23,7 +25,7 @@
   become: yes
   force_handlers: true
   roles:
-    - name: jhampson_dbre.home_assistant_supervised
+    - name: jhampson_dbre.home_assistant.supervised_install
 
 # Extras
 - name: Security Hardening and enhancements

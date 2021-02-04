@@ -1,6 +1,5 @@
 ---
 roles:
-  - name: jhampson_dbre.home_assistant_supervised
-
+  - name: geerlingguy.docker
 collections:
   - name: jhampson_dbre.home_assistant
