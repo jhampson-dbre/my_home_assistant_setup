@@ -34,4 +34,6 @@
   force_handlers: true
   roles:
     - name: jhampson_dbre.home_assistant.harden_os
+    - name: jhampson_dbre.home_assistant.os_agent_auto_update
     - name: jhampson_dbre.home_assistant.fail2ban
+    - name: jhampson_dbre.home_assistant.install_hacs
