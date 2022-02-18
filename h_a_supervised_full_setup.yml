@@ -37,5 +37,5 @@
     - name: jhampson_dbre.home_assistant.os_agent_auto_update
     - name: jhampson_dbre.home_assistant.fail2ban
       vars:
-       fail2ban_reverse_proxy_addon_name: 85d0901c_nginx_proxy_waf
+       fail2ban_reverse_proxy_addon_name: addon_85d0901c_nginx_proxy_waf
     - name: jhampson_dbre.home_assistant.install_hacs
